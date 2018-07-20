@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <script>
+    var isIE10 = navigator.userAgent.search('MSIE 10') != -1 ? true : false;
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>O'Brien Promo - STL Cardinals tickets</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/css/tickets.css?v=1">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCv12K3gl2MzaDtU-XwpkOgjsxGc5jAU7g",
+      authDomain: "obrien-e10be.firebaseapp.com",
+      databaseURL: "https://obrien-e10be.firebaseio.com",
+      projectId: "obrien-e10be"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row header">
+      <div class="col-xs-12 col-sm-3">
+        <div class="logo">
+          <img id="cardinal" src="//s3.amazonaws.com/obrien.com/images/st_louis_cardinals.png" alt="cardinals_logo">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h1>Go to a Cards game on us!</h1>
+        <p>The O'Brien Law Firm is giving away a set of 4 tickets to the Oct. 1<sup>st</sup> Cardinals game. These third base field box seats are great for any fan and all you need to do is complete the form below to be entered into the drawing.</p>
+        <p class="dates">Registration ends on Tuesday 9/26. Winner will be announced via email on Wednesday 9/27.</p>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <div class="logo">
+          <a href="http://obrienlawfirm.com" target="_blank">
+            <img id="obrien" src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" alt="obrien logo">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <form method="post">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="fn">First name:</label>
+              <input type="text" class="form-control" name="firstname" id="fn" value="##firstname##">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="ln">Last name:</label>
+              <input type="text" class="form-control" name="lastname" id="ln" value="##lastname##">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" class="form-control" name="email" id="email" value="##email##">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input type="text" class="form-control" name="phone" id="phone" value="##phone##">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="company" class="company"></label>
+              <input type="text" class="form-control" name="company" id="company" value="##company##">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" class="form-control" name="address1" id="address" value="##address1##">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" class="form-control" name="city" id="city" value="##city##">
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-2">
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" class="form-control" name="state" id="state" value="##state##">
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4">
+            <div class="form-group">
+              <label for="zip">Zip:</label>
+              <input type="text" class="form-control" name="zip" id="zip" value="##zip##">
+            </div>
+          </div>
+        </div>
+        <div class="submit">
+          <input type="submit" class="btn btn-danger" value="SUBMIT">
+        </div>
+      </form>
+    </div>
+
+    <div class="end">
+      <a target="_blank" href="http://##purl##.dontfaceitalone.com/m3_touch2.html">What is mesothelioma?</a>
+    </div>
+  </div>
+
+  <noscript style="width:100%; height:3000px; background:#000; color:#fff; font-size:18pt; position:absolute; top:0; left:0; z-index:10;">
+    <div style="padding-top:3em; width:60%; margin:auto;">If you are seeing this message it means your browser is blocking javascript. This site requires javascript to be enable to display correctly.</div>
+  </noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/obrien.com/app/app.js?v=1"></script>
+  <script>
+    var formData = {
+      purl    : '##purl##',
+      name    : '##firstname##' + ' ' + '##lastname##',
+      company : '##company##',
+      email   : '##email##',
+      phone   : '##phone##',
+      address : '##address1##'+' '+'##city##'+', '+'##state##'+' '+'##zip##',
+      group   : '##targetGroup##'
+    };
+
+    window.onload = function() {
+      if($('.container-fluid').outerHeight() < innerHeight) {
+        $('.container-fluid').css('height', innerHeight + 'px');
+        $('.end').css({
+          position: 'absolute',
+          bottom: 0,
+          width: '100%',
+          display: 'block'
+        });
+      }
+
+      if(formData.group.search(/atty/i) != -1) {
+        $('.company').html('Company');
+      } else {
+        $('.company').html('Union');
+      }
+    };
+  </script>
+</body>
+</html>

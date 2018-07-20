@@ -1,0 +1,46 @@
+.container-fluid { padding-left: 0; padding-right: 0; overflow-x: hidden; }
+
+.header { background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); background-size: cover; padding: 30px; }
+.header img { width: 100%; max-width: 345px; }
+.header .logo-text { color: white; font-size: 150%; }
+
+.row { background-color: #002935; height: 1080px; }
+
+.left { background-color: #002935; padding-right: 0; }
+.left div.wallpaper { width: 90%; margin: 20px auto; background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg"); border-radius: 6px; }
+.left div.jumbotron { width: 100%; background-color: rgba(193,185,160,0.5); padding: 30px; }
+.left .jumbotron p { font-weight: 600; font-size: 110%; }
+
+.right { padding-left: 0; background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg"); }
+.right .jumbotron.qa { color: white; font-size: 150%; background-color: rgba(132,123,107,0.5); margin: 0; border-radius: 0; padding-bottom:120px; }
+
+.quiz-header { background-color: #02475a; color: white; padding: 15px; text-align: center; }
+.quiz-header h2 { display: inline-block; margin: 0 auto; }
+div#download-guide, #final { text-align: center; }
+#response, div#download-guide { margin-top: 20px; }
+
+.question { -webkit-transition: opacity 1s, -webkit-transform 1s; transition: opacity 1s, transform 1s; }
+#question2, #question3, #question4, #question5, #final { display: none; opacity: 0; }
+
+td { padding: 15px; }
+label { margin-bottom: 0; }
+.text-question { padding-left: 15px; padding-right: 15px; }
+
+.glyphicon { display: none; }
+#btn4-next, #btn5-next { display: block; }
+.glyphicon-ok-circle { color: chartreuse; }
+.glyphicon-remove-circle { color: red; }
+.glyphicon-circle-arrow-right { color: white; font-size: 250%; }
+.glyphicon-circle-arrow-right:hover { cursor: pointer; }
+.glyphicon-download { display: inline-block; }
+
+.video-content { width: 90%; margin: 20px auto 0 auto; }
+
+
+@media screen and (max-width:1024px) {
+  .row { height: auto; }
+  .left { padding-top: 15px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px; }
+  .video-content { margin: 0 auto; }
+  .right { padding-left: 15px; }
+  .right .jumbotron.qa { padding-top: 15px; }
+}

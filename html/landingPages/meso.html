@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mesothelioma Awareness</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+    <style>
+      body { background-color: #87664E; }
+      .container-fluid { padding-left: 0; padding-right: 0; overflow-x: hidden; }
+      
+      .header { background-image: url("../../images/asbestosBackground.jpg"); background-size: cover; padding: 30px; }
+      .header img { width: 100%; max-width: 460px; }
+      
+      .left { background-color: #552500; padding-top: 30px; padding-bottom: 60px; }
+      .jumbotron { background-color: #D4986A; width: 90%; margin: 15px auto; }
+      .jumbotron p { font-weight: 600; }
+      
+      .right { padding-left: 0; }
+      .jumbotron.qa { color: white; background-color: transparent; font-size: 150%; }
+      .quiz-header { background-color: #804315; color: #FFCFAA; padding: 15px; text-align: center; }
+      .question { transition: opacity 1s, transform 1s; }
+      #question2, #question3, .video-content { display: none; opacity: 0; }
+      td { padding: 15px; }
+      .glyphicon { display: none; }
+      .glyphicon-ok-circle { color: chartreuse; }
+      .glyphicon-remove-circle { color: red; }
+      .glyphicon-circle-arrow-right { color: white; font-size: 250%; }
+      .glyphicon-circle-arrow-right:hover { cursor: pointer; }
+      .video-content { transition: opacity 1s; }
+      
+      @media screen and (max-width:1024px) {
+        .left {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          height: auto;
+        }
+        .right {
+          padding-left: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header">
+        <img src="../../images/obrienLawLogoWhite.png" />
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12 col-lg-6 left">
+          
+          
+          <div class="jumbotron">
+            <p>The Meso Foundation is the only non-profit organization dedicated to ending mesothelioma and the suffering caused by it, by funding research, providing education and support for patients and their families, and by advocating for federal funding of mesothelioma research. They help patients connect with national mesothelioma experts and obtain the most up-to-date information on treatment options.
+            <br/><br/>
+            Unfortunately, around 3,000 people are still being diagnosed with mesothelioma each year. We strive to educate legislators about the dangers of asbestos disease and protect the rights of our clients.</p>
+          </div>
+        </div>
+        
+        
+        <div class="col-xs-12 col-lg-6 right">
+  
+          <div class="quiz-header">
+            <h2>Test your knowledge. Take our quiz</h2>
+          </div>
+          
+          <div class="jumbotron qa">
+            
+            <div class="video-content">
+              <video id="ObrienVideo" style="width:100%" preload="auto" poster="../../images/videoPosterWithButton.jpg">
+                <source src="http://s3.amazonaws.com/obrien.com/video/Attorney_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            
+            <div id="question3" class="question">
+              <label>Which one of the following countries has NOT banned asbestos?</label>
+              <table>
+                <tr>
+                  <td><input id="k1" name="r3" type="radio" value="us"/></td>
+                  <td><label for="k1">United States</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="k2" name="r3" type="radio" value="Honduras"/></td>
+                  <td><label for="k2">Honduras</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="k3" name="r3" type="radio" value="slovakia"/></td>
+                  <td><label for="k3">Slovakia</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn3-answer" class="btn btn-default">Check Answer</button>
+                    <span id="btn3-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="question2" class="question">
+              <label>Which one of these is NOT a kind of asbestos fiber?</label>
+              <table>
+                <tr>
+                  <td><input id="j1" name="r2" type="radio" value="serpentine"/></td>
+                  <td><label for="j1">Serpentine</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="j2" name="r2" type="radio" value="polyester"/></td>
+                  <td><label for="j2">Polyester</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="j3" name="r2" type="radio" value="amphibole"/></td>
+                  <td><label for="j3">Amphibole</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn2-answer" class="btn btn-default">Check Answer</button>
+                    <span id="btn2-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="question1" class="question">
+              <label>What is the greek meaning for the word "asbestos"?</label>
+              <table>
+                <tr>
+                  <td><input id="i1" name="r1" type="radio" value="inextingquishable"/></td>
+                  <td><label for="i1">Inextinguishable</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="i2" name="r1" type="radio" value="asphyxiation"/></td>
+                  <td><label for="i2">Asphyxiation</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="i3" name="r1" type="radio" value="condensible"/></td>
+                  <td><label for="i3">Condensible</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn1-answer" class="btn btn-default">Check Answer</button>
+                    <span id="btn1-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      //////////QUESTION 1
+      document.getElementById("btn1-answer").onclick = function() {
+        for(var index in document.querySelectorAll("#question1 .glyphicon")) {
+          if(index <= 3) {
+            document.querySelectorAll("#question1 .glyphicon")[index].style.display = "inline";
+            this.style.display = "none";
+          }
+        }
+      };
+      
+      document.getElementById("btn1-next").onclick = function() {
+        document.getElementById("question1").style.webkitTransform = "translateX(2420px)";
+        
+        setTimeout(function() {
+          document.getElementById("question1").style.display = "none";
+          document.getElementById("question2").style.display = "block";
+        }, 500);
+        
+        setTimeout(function() {
+          document.getElementById("question2").style.opacity = 1;
+        }, 600);
+        
+      }
+      
+      //////////QUESTION 2
+      document.getElementById("btn2-answer").onclick = function() {
+        for(var index in document.querySelectorAll("#question2 .glyphicon")) {
+          if(index <= 3) {
+            document.querySelectorAll("#question2 .glyphicon")[index].style.display = "inline";
+            this.style.display = "none";
+          }
+        }
+      };
+      
+      document.getElementById("btn2-next").onclick = function() {
+        document.getElementById("question2").style.webkitTransform = "translateX(2420px)";
+        
+        setTimeout(function() {
+          document.getElementById("question2").style.display = "none";
+          document.getElementById("question3").style.display = "block";
+        }, 500);
+        
+        setTimeout(function() {
+          document.getElementById("question3").style.opacity = 1;
+        }, 600);
+        
+      }
+      
+      /////////QUESTION 3
+      document.getElementById("btn3-answer").onclick = function() {
+        for(var index in document.querySelectorAll("#question3 .glyphicon")) {
+          if(index <= 3) {
+            document.querySelectorAll("#question3 .glyphicon")[index].style.display = "inline";
+            this.style.display = "none";
+          }
+        }
+      };
+      
+      document.getElementById("btn3-next").onclick = function() {
+        document.getElementById("question3").style.webkitTransform = "translateX(2420px)";
+        
+        setTimeout(function() {
+          document.getElementById("question3").style.display = "none";
+          document.getElementsByClassName("video-content")[0].style.display = "block";
+        }, 500);
+        
+        setTimeout(function() {
+          document.getElementsByClassName("video-content")[0].style.opacity = 1;
+        }, 600);
+        
+      }
+      
+      document.getElementById("ObrienVideo").onclick = function() {
+        this.play();
+      };
+    </script>
+  </body>
+</html>

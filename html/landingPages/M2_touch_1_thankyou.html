@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Partners in the battle against Mesothelioma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+      body { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg");
+      }
+      
+      .container-fluid { 
+        padding-left: 0; 
+        padding-right: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        overflow-x: hidden;
+      }
+
+      .header { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover; 
+        padding: 30px; 
+      }
+      
+      .footer {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover;
+        background-position: bottom;
+        padding: 30px;
+        color: white;
+      }
+      
+      .header img { 
+        width: 100%; max-width: 300px; 
+      }
+      
+      .row {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+      }  
+      
+      
+      @media screen and (max-width: 736px) {
+        body, div {
+          font-size: 109%;
+        }
+        
+        .header {
+          text-align: center;
+        } 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" /><br/>
+      </div>
+
+      <div class="row">
+        <h1>Thank You!</h1>        
+      </div>
+      
+      <div class="footer">
+        <div>
+          815 Geyer Avenue<br/>
+          St. Louis, Missouri 63104<br/>
+          866-588-0558<br/>
+          314-588-0558
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script>
+      
+      // Make sure the web page is displaying correctly
+      function checkDisplay() {
+        $(".footer").css({
+            width: "auto",
+            position: "relative"
+          });
+        
+        if($(".container-fluid").outerHeight() < innerHeight) {
+          $(".container-fluid").css("height", innerHeight + "px");
+          $(".footer").css({
+            width: "100%",
+            position: "absolute",
+            bottom: 0
+          });
+        }
+      }
+      
+  
+      $(document).ready(function() {
+        checkDisplay();
+      });
+    </script>
+  </body>
+</html>

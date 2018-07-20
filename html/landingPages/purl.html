@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/obrien.com/css/main.css" />
+    <script>
+      function shutter() {
+        $(".blocks").addClass("flipped");
+      }
+      
+      function domino() {
+        showPlayButton = "";
+        topple = setInterval(function(){
+          $(".blocks").eq(index).addClass("flipped");
+          ++index;
+          if (index == 24) {
+            clearInterval(topple);
+
+            //fade-in play button
+            showPlayButton = setTimeout(function(){
+              $(".vid a").animate({opacity: 1}, 1000);
+            }, 1000);
+          }
+        }, 100);
+      }
+      
+      function init() {
+        //width & height of scene
+        width = $(".vid").outerWidth();
+        height = $(".vid").outerWidth() * (483/917);
+        
+        index = 0;
+
+        //image
+        poster = new Image();
+        poster.setAttribute("crossOrigin", "");
+        poster.width = width;
+        poster.height = height;
+        poster.src = "https://s3.amazonaws.com/obrien.com/images/poster1.JPG";
+
+        //fake canvas
+        canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        context = canvas.getContext("2d");
+
+        //draw image to fake canvas and grab a slice
+        poster.onload = function(){
+          context.drawImage(poster, 0, 0, width, height);
+
+          //slice the image up into 24 sections and store in an array
+          var slices = []
+          for (var i = 0, r = 1; i < 4; ++i) {
+            c = 0;
+
+            for (var j = 0; j < 6; ++j) {
+              slices.push(context.getImageData(c, r, width/6, height/4));
+              c += width/6;
+            }
+
+            r += height/4;
+          }
+
+          //resize the canvas to accomodate image slice
+          context.clearRect(0, 0, width, height);
+          canvas.width = width/6;
+          canvas.height = height/4;
+
+          //generate new image elements for each slice and store in an array
+          blocks = [];
+
+          for (var i = 0; i < slices.length; ++i) {
+            context.putImageData(slices[i], 0, 0);
+            var newImg = new Image();
+            newImg.src = canvas.toDataURL("image/jpeg");
+            newImg.setAttribute("class", "blocks");
+            blocks.push(newImg);
+          }
+
+          //push image slices onto the screen
+          for (var i = 0; i < 24; ++i) {
+            document.getElementById("imageArea").appendChild(blocks[i]);
+          }
+
+          //requestAnimationFrame(shutter);
+          requestAnimationFrame(domino);
+        };
+      }
+    </script>
+  </head>
+  <body>
+    
+    <div class="jumbotron">
+      <h3 style="text-align: center;">
+        <noscript>To continue viewing this site please enable javascript in your browser.</noscript>
+      </h3>
+    </div>
+
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="https://s3.amazonaws.com/obrien.com/images/obrienLawLogoWhite.png" alt="O'Brienlogo" />
+      </div>
+      
+      <div class="video-content">
+        <div class="vid">
+          <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-play-circle"></span> Play
+          </a>
+          <div id="imageArea"></div>
+        </div>
+      </div>
+      
+      <div class="text-1">
+
+        ##text_1##
+        
+        <div>
+          <form id="next" method="post">
+            <input type="submit" class="btn btn-default next" value="NEXT" />
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script src="https://s3.amazonaws.com/obrien.com/node_modules/jquery-1x/node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        $(".jumbotron").css("display", "none");
+        //$(".container-fluid").css("display", "block");
+
+        videoTag = document.createElement("video");
+        videoTag.style.backgroundColor = "black";
+        videoTag.style.width = "100%";
+        videoTag.controls = true;
+        videoTag.preload = "auto";
+        videoTag.onprogress = function() {
+          console.log(videoTag.readyState);
+        };
+
+        mp4 = document.createElement("source");
+        mp4.src = "https://s3.amazonaws.com/obrien.com/video/Attorney_1.mp4";
+        mp4.type = "video/mp4";
+
+        webm = document.createElement("source");
+        webm.src = "https://s3.amazonaws.com/obrien.com/video/Attorney_1.webm";
+        webm.type = "video/webm";
+
+        ogv = document.createElement("source");
+        webm.src = "https://s3.amazonaws.com/obrien.com/video/Attorney_1.ogv";
+        webm.type = "video/ogg";
+
+        $(videoTag).append(mp4);
+        $(videoTag).append(webm);
+        $(videoTag).append(ogv);
+
+
+        $(".vid a").click(function() {
+          $("#imageArea").remove();
+          $(".vid a").remove();
+          $(".vid").append(videoTag);
+          $(".video-content").css("paddingTop", "2%");
+          videoTag.play();
+        });
+        
+        $(window).on("load", function(){
+          $(".container-fluid").css("display", "block");
+          init();
+        });
+        
+        $(window).on("orientationchange", function(){
+          
+          draw = "";
+          
+          if( document.getElementById("imageArea") != undefined ) {
+            clearTimeout(draw);
+            clearInterval(topple);
+            clearTimeout(showPlayButton);
+            $(".vid a").css("opacity", 0);
+            $("#imageArea").html("");
+            
+            draw = setTimeout(function(){
+              init();
+            }, 500);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Partners in the battle against Mesothelioma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #000000;
+        font-family: 'Lato', sans-serif;
+      }
+      
+      .container-fluid { 
+        padding-left: 0; 
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        overflow-x: hidden;
+      }
+
+      .header { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover; 
+        padding: 30px;
+        width: 100%;
+      }
+      
+      .row {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg");
+        background-repeat: none;
+        background-size: cover;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        overflow-y: hidden;
+      }
+      
+      #slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        opacity: 0;
+        -webkit-transition: all 1s linear;
+        transition: all 1s linear;
+      }
+      
+      #slideshow {
+        position: relative;
+        height: 100%;
+        background-color: #000000;
+        overflow: hidden;
+      }
+      
+      #slideshow-mobile {
+        display: none;
+      }
+      
+      .slideshow-copy {
+        position: absolute;
+        top: 15px;
+        line-height: 180%;
+        font-size: 120%;
+        right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      h2 {
+        font-weight: bold;
+        margin-top: 0;
+      }
+      
+      h3 {
+        text-decoration: underline;
+      }
+      
+      #slide2-copy, #slide3-copy {
+        opacity: 0;
+      }
+      
+      .btn {
+        margin: 5px;
+      }
+      
+      #nav-btn {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        z-index: 999;
+      }
+      
+      #prev {
+        display: none;
+      }
+      
+      .footer {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover;
+        background-position: bottom;
+        padding: 30px;
+        color: #ffffff;
+        width: 100%;
+        text-align: right;
+      }
+      
+      .header img { 
+        width: 100%; max-width: 300px; 
+      }
+      
+      .contact-me {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+      }
+      
+      .contact-me div {
+        display: inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 15px;
+      }
+      
+      .contact-me div:hover {
+        cursor: pointer;
+      }
+      
+      
+      
+      @media screen and (max-width: 736px) {
+        .header {
+          text-align: center;
+        }
+        
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        
+        #slideshow {
+          display: none;
+        }
+        
+        #slideshow-mobile {
+          display: block;
+        }
+        
+        #slideshow-mobile img {
+          width: 100%;
+        }
+        
+        #slide1-copy, #slide2-copy, #slide3-copy {
+          display: none;
+          position: relative;
+          opacity: 1;
+          top: 0;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+        
+        #nav-btn {
+          display: none;
+        }
+        
+        .slideshow-copy-mobile {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" />
+      </div>
+      
+      <div class="contact-me">
+        <div>Contact Us</div>
+      </div>
+
+      <div class="row" id="row">
+        <div id="slideshow">
+          <img id="slide3" src="http://s3.amazonaws.com/obrien.com/images/slide3.jpg" alt="slide3" />
+          <img id="slide2" src="http://s3.amazonaws.com/obrien.com/images/slide2.jpg" alt="slide2" />
+          <img id="slide1" src="http://s3.amazonaws.com/obrien.com/images/slide1.jpg" alt="slide1" />
+        </div>
+        
+        <div id="slideshow-mobile">
+          <img id="slide1" src="http://s3.amazonaws.com/obrien.com/images/slide1.jpg" alt="slide1" />
+          <div class="slideshow-copy-mobile"><h2>There is no known safe level of asbestos exposure.</h2><h3>Occupational Exposure</h3>Workers who were exposed to asbestos for long periods of time, such as those in the construction, pipefitting, and plastering professions, have an increased risk of developing asbestos disease. Even workers with a brief exposure can develop mesothelioma. Many times someone with very little on-the-job exposure, such as a teenager who had a brief summer job in construction, will be diagnosed with mesothelioma.</div>
+          <img id="slide2" src="http://s3.amazonaws.com/obrien.com/images/slide2.jpg" alt="slide2" />
+          <div class="row slideshow-copy-mobile" style="background-image:none; margin-top:0">
+            <h2>Occupations That Have a Higher Risk of Asbestos Exposure</h2>
+            <div class="col-xs-12 col-sm-6">
+              <ul>
+                <li>Asbestos workers/insulators</li>
+                <li>Automotive workers</li>
+                <li>Bricklayers</li>
+                <li>Boilermakers</li>
+                <li>Carpenters</li>
+                <li>Chemical plant workers</li>
+                <li>Electricians</li>
+                <li>Floor tile layers</li>
+                <li>Iron workers</li>
+                <li>Laborers</li>
+                <li>Mechanics</li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <ul>
+                <li>Navy servicemen aboard ships</li>
+                <li>Operating engineers</li>
+                <li>Pipefitters</li>
+                <li>Plasterers</li>
+                <li>Plastics workers</li>
+                <li>Power plant workers</li>
+                <li>Refinery workers</li>
+                <li>Sewer and pressure pipe installers</li>
+                <li>Sheet metal workers</li>
+                <li>Shipyard workers</li>
+              </ul>
+            </div>
+          </div>
+          <img id="slide3" src="http://s3.amazonaws.com/obrien.com/images/slide3.jpg" alt="slide3" />
+          <div class="slideshow-copy-mobile"><h2>Family members of workers who worked with or around asbestos-containing products may have had indirect exposure.</h2><h3>Indirect Exposure</h3>The risk extends beyond those who worked directly with or around asbestos. Take home or indirect exposure to asbestos is also a prevalent cause of mesothelioma. For example, many cases have been reported of wives and children of workers in high-risk industries developing mesothelioma because they washed asbestos-laden work clothing or were in the room when work clothes were removed. If a worker didn’t change out of asbestos-contaminated clothing, fibers could become embedded in furniture, carpet, and drapes around the home.</div>
+        </div>
+        
+        <div class="slideshow-copy" id="slide3-copy"><h2>Family members of workers who worked with or around asbestos-containing products may have had indirect exposure.</h2><h3>Indirect Exposure</h3>The risk extends beyond those who worked directly with or around asbestos. Take home or indirect exposure to asbestos is also a prevalent cause of mesothelioma. For example, many cases have been reported of wives and children of workers in high-risk industries developing mesothelioma because they washed asbestos-laden work clothing or were in the room when work clothes were removed. If a worker didn’t change out of asbestos-contaminated clothing, fibers could become embedded in furniture, carpet, and drapes around the home.</div>
+        
+        <div class="slideshow-copy" id="slide2-copy">
+          <h2>Occupations That Have a Higher Risk of Asbestos Exposure</h2>
+          <div class="row" style="background-image:none">
+            <div class="col-xs-12 col-sm-6">
+              <ul>
+                <li>Asbestos workers/insulators</li>
+                <li>Automotive workers</li>
+                <li>Bricklayers</li>
+                <li>Boilermakers</li>
+                <li>Carpenters</li>
+                <li>Chemical plant workers</li>
+                <li>Electricians</li>
+                <li>Floor tile layers</li>
+                <li>Iron workers</li>
+                <li>Laborers</li>
+                <li>Mechanics</li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <ul>
+                <li>Navy servicemen aboard ships</li>
+                <li>Operating engineers</li>
+                <li>Pipefitters</li>
+                <li>Plasterers</li>
+                <li>Plastics workers</li>
+                <li>Power plant workers</li>
+                <li>Refinery workers</li>
+                <li>Sewer and pressure pipe installers</li>
+                <li>Sheet metal workers</li>
+                <li>Shipyard workers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slideshow-copy" id="slide1-copy"><h2>There is no known safe level of asbestos exposure.</h2><h3>Occupational Exposure</h3>Workers who were exposed to asbestos for long periods of time, such as those in the construction, pipefitting, and plastering professions, have an increased risk of developing asbestos disease. Even workers with a brief exposure can develop mesothelioma. Many times someone with very little on-the-job exposure, such as a teenager who had a brief summer job in construction, will be diagnosed with mesothelioma. 
+        </div>
+        
+        <div id="nav-btn">
+          <button id="prev" class="btn btn-info">Previous</button>
+          <button id="next" class="btn btn-info">Next</button>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <div>
+          815 Geyer Avenue &nbsp;&nbsp; | &nbsp;&nbsp; St. Louis, Missouri 63104 &nbsp;&nbsp; | &nbsp;&nbsp; 866-588-0558 &nbsp;&nbsp; | &nbsp;&nbsp; 314-588-0558
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Send us an email</h4>
+          </div>
+          
+          <form method="post">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="fn">First Name: </label>
+                <input class="form-control" type="text" name="firstname" id="fn" value="##firstname##" />
+              </div>
+              <div class="form-group">
+                <label for="ln">Last Name: </label>
+                <input class="form-control" type="text" name="lastname" id="ln" value="##lastname##" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email: </label>
+                <input class="form-control" type="text" name="email" id="email" value="##email##" />
+              </div>
+              <div class="form-group">
+                <label for="comment">Message: </label>
+                <textarea class="form-control" type="text" name="comment" id="comment" row="5" placeholder="type short message..."></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input type="submit" class="btn btn-default" value="Send" />
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script src="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      var targetGroup = "##targetgroup##";
+      var currentSlide = 1;
+      var zindex = 0;
+      
+      function setWindow () {
+        var headerHeight = $(".header").outerHeight();
+        var footerHeight = $(".footer").outerHeight();
+        
+        if (innerWidth > innerHeight) {
+          if ($(".container-fluid").outerHeight() < innerHeight) {
+            $("#row").css("height", innerHeight - (headerHeight + footerHeight) + "px");
+            $(".footer").css({
+              position: "fixed",
+              bottom: 0
+            });
+          }
+        }
+        
+        $('#slideshow').css('width', document.querySelector('#slideshow img').clientWidth + 'px');
+        $('.slideshow-copy').css('width', innerWidth - document.querySelector('#slideshow img').clientWidth + 'px');
+      }
+      
+      $('#slide1').css('opacity', 1);
+      
+      
+      $(document).ready(function () {
+        
+        if (targetGroup == "Atty") {
+          $(".union").hide();
+        } else {
+          $(".atty").hide();
+        }
+        
+        // Event Listener for "Next" button
+        $('#next').click(function() {
+          if(currentSlide == 1) {
+            ++currentSlide;
+            $('#slide2').css('zIndex', ++zindex);
+            $('#slide2').css('opacity', 1);
+            $('#slide1').css('opacity', 0);
+            
+            $('#slide2-copy').css('zIndex', zindex);
+            $('#slide2-copy').css('opacity', 1);
+            $('#slide1-copy').css('opacity', 0);
+            
+            $('#prev').css('display', 'inline-block');
+            return;
+          }
+          
+          if(currentSlide == 2) {
+            ++currentSlide;
+            $('#slide3').css('zIndex', ++zindex);
+            $('#slide3').css('opacity', 1);
+            $('#slide2').css('opacity', 0);
+            
+            $('#slide3-copy').css('zIndex', zindex);
+            $('#slide3-copy').css('opacity', 1);
+            $('#slide2-copy').css('opacity', 0);
+            
+            $('#next').css('display', 'none');
+            return;
+          }
+        });
+      
+        // Event listener for "Previous" button
+        $('#prev').click(function() {
+          if(currentSlide == 3) {
+            --currentSlide;
+            $('#slide2').css('zIndex', ++zindex);
+            $('#slide2').css('opacity', 1);
+            $('#slide3').css('opacity', 0);
+            
+            $('#slide2-copy').css('zIndex', zindex);
+            $('#slide2-copy').css('opacity', 1);
+            $('#slide3-copy').css('opacity', 0);
+            
+            $('#next, #prev').css('display', 'inline-block');
+            return;
+          }
+          
+          if(currentSlide == 2) {
+            --currentSlide;
+            $('#slide1').css('zIndex', ++zindex);
+            $('#slide1').css('opacity', 1);
+            $('#slide2').css('opacity', 0);
+            
+            $('#slide1-copy').css('zIndex', zindex);
+            $('#slide1-copy').css('opacity', 1);
+            $('#slide2-copy').css('opacity', 0);
+            
+            $('#prev').css('display', 'none');
+            return;
+          }
+        });
+        
+        $(".contact-me").click(function() {
+          $("#myModal").modal("show");
+        });
+      });
+        
+      window.onload = setWindow;
+      window.onresize = setWindow;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Partners in the battle against Mesothelioma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+      * {
+        font-size: 18px;
+      }
+      
+      body { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg");
+      }
+      
+      .container-fluid { 
+        padding-left: 0; 
+        padding-right: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        overflow-x: hidden;
+      }
+
+      .header { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover; 
+        padding: 30px; 
+      }
+      
+      .footer {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover;
+        background-position: bottom;
+        padding: 30px;
+        color: white;
+      }
+      
+      .header img { 
+        width: 100%; max-width: 300px; 
+      }
+      
+      .row {
+        padding-bottom: 15px;
+      }
+      
+      .video-content { 
+        margin: 15px;
+      }
+      
+      .video-content video { 
+        width: 100%; 
+      }
+      
+      .question { 
+        background-color: rgba(0, 92, 130, 0.5);
+        padding: 15px; 
+        text-align: center; 
+        color: white; 
+        margin-top: 5px;
+        border: solid 3px #8c8c8c;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px #595959;
+      }
+      
+      .col-md-6.left {
+        padding-right: 0;
+      }
+      
+      .col-md-6.right {
+        padding-left: 0;
+      }
+      
+      .col-xs-12.left, .col-xs-12.right {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .left p {
+        text-align: left; 
+        margin: 15px 15px 30px 15px; 
+      }
+      
+      .right p {
+        text-align: center;
+      }
+      
+      .mobile-video-content {
+        display: none;
+        margin: 0 15px;
+      }
+      
+      #icon-partner {
+        text-align: center;
+        font-family: serif;
+        
+        color: white;
+        text-shadow: 1px 1px 3px black;
+      }
+      
+      #icon-partner div {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        padding: 15px 0;
+        margin-right: 30px;
+        border-top: solid 5px black;
+        border-bottom: solid 5px black;
+        border-left: solid 2px black;
+        border-right: solid 2px black;
+      }
+
+      #icon-partner img {
+        height: 150px;
+      }
+      
+      
+      
+      
+      /* Form Controls  */
+      
+      .input {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin-right: 15px;
+      }
+      
+      #submit-btn { 
+        margin: 15px 0; 
+        width: 90%; 
+        padding: 15px; 
+        background-color: rgb(0, 92, 130);
+        
+        border-radius: 6px;
+      }
+      
+      #submit-btn:hover {
+        background-color: #00006d;
+      }
+      
+      .response {
+        display: inline-block;
+        width: 80%;
+      }
+      
+      label {
+        font-weight: 500;
+        vertical-align: top;
+      }
+      
+      li {
+        text-align: left;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      
+      .form-group {
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 15px;
+      }
+      
+      .form-group.last {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+      }
+      
+      form {
+        margin: 15px;
+      }
+      
+      .form-control {
+        display: none;
+        margin-top: 5px;
+      }
+      
+      .close {
+        color: burlywood;
+        opacity: 1;
+      }
+      
+      .modal-header, .modal-footer {
+        background-color: rgb(0, 92, 130);
+        color: white;
+      }
+      
+      
+      
+      
+      @media screen and (max-width: 736px) {
+        * {
+          font-size: 100%;
+        }
+        
+        .header {
+          text-align: center;
+        }
+        
+        ol {
+          margin-left: -15px;
+        }
+        
+        li {
+          text-align: left;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        .form-group {
+          text-align: left;
+          margin-left: 15px;
+          margin-right: 15px;
+          margin-top: 15px;
+        }
+        
+        form {
+          width: 95%;
+          margin: auto;
+        }
+        
+        .mobile-video-content {
+          display: block;
+        }
+        
+        .mobile-video-content video {
+          width: 100%;
+        }
+        
+        .video-content {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" /><br/>
+      </div>
+
+      <div class="row">
+        
+        <div class="mobile-video-content">
+          <video controls poster="http://s3.amazonaws.com/obrien.com/images/m2t1_video_poster.JPG">
+              <source type="video/mp4" src="http://s3.amazonaws.com/obrien.com/video/Vingettes_Atty_Partnering_mobile.mp4" />
+          </video>
+        </div>
+        
+        <div class="col-xs-12 col-md-6 left">
+          <form method="post">
+            
+            <div class="question">
+
+              <p>##firstname##, as an attorney, your client's trust means they come to you first for legal advice. If a client is facing mesothelioma, you want to get them to the best place possible.</p>
+              <p>With our focus solely on these types of complex cases, we treat every referral with the utmost integrity, ensuring a positive experience for the client and an excellent reflection upon your practice.</p>
+
+              <ol>
+                <li>
+                  <label>Have you ever received a mesothelioma case?</label>
+                  
+                  <div class="form-group">
+                    <div class="input">
+                      <input type="radio" name="input1" id="radio1" value="yes" />
+                    </div>
+                    <div class="response">
+                      <label for="radio1">Yes</label>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="input">
+                      <input type="radio" name="input1" id="radio2" value="no" />
+                    </div>
+                    <div class="response">
+                      <label for="radio2">No</label>
+                    </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <label>What do you value in a partnership?</label>
+              
+                  <div class="form-group">
+                    <div class="input">
+                      <input type="checkbox" name="input2" id="check1" value="Exceptional service provided to my client" />
+                    </div>
+                    <div class="response">
+                      <label for="check1">Exceptional service provided to my client</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input">
+                      <input type="checkbox" name="input2" id="check2" value="Minimal intrusion upon my practice" />
+                    </div>
+                    <div class="response">
+                      <label for="check2">Minimal intrusion upon my practice</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input">
+                      <input type="checkbox" name="input2" id="check3" value="Prompt payment of referral fees" />
+                    </div>
+                    <div class="response">
+                      <label for="check3">Prompt payment of referral fees</label>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+                            
+              <div class="form-group last">
+                <div class="input">
+                  <input type="text" class="hidden" name="input3" id="input3" value="do not contact me." />
+                </div>
+                <div class="response">
+                  <label for="input_3">I would like to be contacted about a mesothelioma case</label>
+                </div>
+                
+                <input class="form-control" type="text" name="email" placeholder="Email" value="##email##" />
+                <input class="form-control" type="text" name="phone" placeholder="Phone" value="##phone##" />
+              </div>
+              
+              <div>
+                <button type="submit" id="submit-btn">Submit</button>
+              </div>
+              
+            </div>
+            
+          </form>
+        </div>
+
+        <div class="col-xs-12 col-md-6 right">
+          <div class="video-content">
+            <video controls poster="http://s3.amazonaws.com/obrien.com/images/m2t1_video_poster.JPG">
+                <source type="video/mp4" src="http://s3.amazonaws.com/obrien.com/video/Vingettes_Atty_Partnering.mp4" />
+            </video>
+          </div>
+          
+          <p><i>Learn what a partnership with the O’Brien Law Firm can mean for you in the video above.</i></p>
+          
+          <div id="icon-partner">
+            <img src="http://s3.amazonaws.com/obrien.com/images/icon-partnership.png" />
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="footer">
+        <div>
+          815 Geyer Avenue<br/>
+          St. Louis, Missouri 63104<br/>
+          866-588-0558<br/>
+          314-588-0558
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Whoa partner, wait a minute!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script src="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      
+      // Make sure the web page is displaying correctly
+      function checkDisplay() {
+        $(".footer").css({
+            width: "auto",
+            position: "relative"
+          });
+        
+        if($(".container-fluid").outerHeight() < innerHeight) {
+          $(".container-fluid").css("height", innerHeight + "px");
+          $(".footer").css({
+            width: "100%",
+            position: "absolute",
+            bottom: 0
+          });
+        }
+      }
+      
+      
+      
+      $(document).ready(function() {
+        
+        checkDisplay();
+        
+        var input_3 = document.createElement("input");
+        input_3.type = "checkbox";
+        input_3.id = "input_3";
+        
+        $(".last .input").append(input_3);
+        
+        $("#input_3").change(function() {
+          if(this.checked == true) {
+            $("#input3").attr("value", "please contact me");
+            $(".form-control").css("display", "block");
+          }
+          else {
+            $("#input3").attr("value", "do not contact me");
+            $(".form-control").css("display", "none");
+          }
+        });
+        
+        
+        
+        // Form validation
+        $("form").on("submit", function(event) {
+          
+          answer1 = this["input1"].value;
+          answer2 = [];
+          
+          if(this["input2"][0].checked == true) {
+            answer2.push(this["input2"][0].value);
+          }
+          
+          if(this["input2"][1].checked == true) {
+            answer2.push(this["input2"][1].value);
+          }
+          
+          if(this["input2"][2].checked == true) {
+            answer2.push(this["input2"][2].value);
+          }
+          
+          
+          if(answer1 == "" && answer2.length == 0) {
+            $(".modal-body p").html("You didn't answer question 1 or 2.");
+            $("#myModal").modal("show");
+            return false;
+          }
+          
+          if(answer1 == "") {
+            $(".modal-body p").html("You didn't answer question 1.");
+            $("#myModal").modal("show");
+            return false;
+          }
+          
+          if(answer2.length == 0) {
+            $(".modal-body p").html("You didn't answer question 2.");
+            $("#myModal").modal("show");
+            return false;
+          }
+          
+          if(this["input_3"].checked == true && this["email"].value == "" && this["phone"].value == "") {
+            $(".modal-body p").html("If you want us to contact you please provide your email or phone.");
+            $("#myModal").modal("show");
+            return false;
+          }
+          
+          return true;
+        });
+        
+      });
+    </script>
+  </body>
+</html>

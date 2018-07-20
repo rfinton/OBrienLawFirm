@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      body { 
+        font-family: sans-serif; 
+        color: gray; 
+        text-align: center;
+        background-image: url("https://s3.amazonaws.com/obrien.com/images/CreamPaperTextureWeb.jpg");
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .logo {
+        background-color: rgba(144, 140, 111, 0.5);
+      }
+      
+      #container {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 20px; 
+        border: solid 1px gray;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px #888888;
+        background-color: white;
+      }
+      
+      #timer {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="https://s3.amazonaws.com/obrien.com/images/obrienLawLogoWhite.png" alt="O'Brienlogo" /><br/>
+      <span style="color:white">Mesothelioma &amp; Asbestos Attorneys</span>
+    </div>
+    
+    <div id="container">
+      <h1>Thanks for your interest ##firstname##!</h1>
+      <p>Please check your email for the guide about mesothelioma. We'll be in touch with you soon. In the meantime, we welcome you to learn more about us on our main website. This page will redirect in <span id="timer">20</span> seconds.</p>
+    </div>
+    <script>
+      var countDown = 20;
+      var timer = setInterval(function(){
+        countDown -= 1;
+        document.getElementById("timer").innerHTML = countDown;
+        if (countDown == 1) {
+          location.href = "http://obrienlawfirm.com";
+        }
+        if (countDown == 0) {
+          clearInterval(timer);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

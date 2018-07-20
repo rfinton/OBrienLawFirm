@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Partners in the battle against Mesothelioma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <style id="keyframes"></style>
+    <style>
+      body {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      
+      .container-fluid { 
+        padding-left: 0; 
+        padding-right: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      .header { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover; 
+        padding: 30px; 
+      }
+      
+      .row {
+        margin: 0 0 20px 0;
+      }
+      
+      .footer {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg");
+        background-size: 100% auto;
+        background-position: center bottom;
+        color: white;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .footer img {
+        margin: 40px 15px 0 15px;
+      }
+      
+      .footer img:first-of-type {
+        float: left;
+        height: 40px;
+      }
+      
+      .footer img:last-of-type {
+        float: right;
+        height: 40px;
+      }
+      
+      .footer div {
+        display: inline-block;
+        margin: 15px 0;
+      }
+      
+      .footer a {
+        color: white !important;
+        text-decoration: none;
+      }
+      
+      .header img {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .faq {
+        background-color: black;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        margin-top: 15px;
+        overflow: hidden;
+        transition: height 0.5s ease-out;
+        position: relative;
+      }
+      
+      .faq:hover {
+        cursor: pointer;
+      }
+      
+      .question {
+        font-weight: bolder;
+        font-size: 110%;
+        color: white;
+        padding: 15px;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+      }
+      
+      .answer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        transform: translateY(100%);
+        transition: transform 1s ease-out;
+      }
+      
+      .checkbox {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      
+      .request-btn {
+        text-align: center;
+      }
+      
+      .video-content video {
+        width: 100%;
+        object-fit: cover;
+        margin-top: 15px;
+      }
+      
+      .modal-content {
+        text-align: left;
+      }
+      
+      @media screen and (max-width: 1024px) {
+        body {
+          background-size: 1366px 1024px;
+        }
+        
+        .header {
+          text-align: center;
+        }
+      }
+    </style>
+    <script>
+      var targetGroup = "##targetGroup##";
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" /><br/>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-lg-6" id="col-left">
+          <div class="video-content">
+            <video controls poster="http://s3.amazonaws.com/obrien.com/images/m2t1_video_poster.JPG">
+              <source type="video/mp4" />
+            </video>
+          </div>
+          
+          <form method="post">
+            <div class="checkbox">
+              <label><input type="checkbox" name="input1" value="I would like to be contacted about a mesothelioma or asbestos case" /> I would like to be contacted about a mesothelioma or asbestos case.</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="input2" value="I would like to receive more information" /> I would like to receive more information.</label>
+            </div>
+            <div class="form-group request-btn">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Request</button>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Verify your contact info</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="firstname">First Name: </label>
+                      <input type="text" class="form-control" name="firstname" id="firstname" value="##firstname##" />
+                    </div>
+                    <div class="form-group">
+                      <label for="lastname">Last Name: </label>
+                      <input type="text" class="form-control" name="lastname" id="lastname" value="##lastname##" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email: </label>
+                      <input type="text" class="form-control" name="email" id="email" value="##email##" />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone: </label>
+                      <input type="text" class="form-control" name="phone" id="phone" value="##phone##" placeholder="optional" />
+                    </div>
+                    <div class="form-group">
+                      <label for="comment">Comment:</label>
+                      <textarea class="form-control" rows="5" id="comment" name="input3"></textarea>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" class="btn btn-default" value="Submit Request" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+          
+        </div>
+        
+        <div class="col-xs-12 col-lg-6">
+          
+          <div class="faq" style="background-image:url('http://s3.amazonaws.com/obrien.com/images/OBrienLawFirm27.jpg')">
+            <div class="question">
+              <span class="atty">What types of attorneys do you work with and receive referrals from?</span>
+              <span class="union">What type of unions do you work with?</span>
+            </div>
+
+            <div class="answer">
+              <span class="atty">
+                <p>We regularly receive referrals from firms of all sizes and types, including:</p>
+                <ul>
+                  <li>Solo practitioners</li>
+                  <li>Small, general practice firms</li>
+                  <li>Premier personal injury practices</li>
+                  <li>Asbestos plaintiff firms practicing in other areas of the country</li>
+                </ul>
+              </span>
+              <span class="union">
+                <p>We represent anyone who gets diagnosed with asbestos disease, but generally our clients come from an industrial background. We regularly represent members of the Heat and Frost Insulators, Operating Engineers, Pipefitters, and Sheet Metal Workers unions. Other common occupations where exposure occurs include carpenters, electricians, plumbers, boilermakers, and plastics workers, to name a few.</p>
+              </span>
+            </div>
+          </div>
+          
+          <div class="faq" style="background-image:url('http://s3.amazonaws.com/obrien.com/images/Cube_ClientMeeting.jpg')">
+            <div class="question">
+              <span class="atty">How will you provide updates to me about my case?</span>
+              <span class="union">What do you handle that other mesothelioma firms don't?</span>
+            </div>
+
+            <div class="answer">
+              <span class="atty">
+                <p>To start, we give all referring attorneys an expectation for the life of a case. We also provide referral updates on a regular basis throughout the case.</p>
+              </span>
+              <span class="union">
+                <p>We handle all types of asbestos cases - mesothelioma, lung cancer, and asbestosis. With our focus solely on these types of complex cases, we can dedicate the time and resources necessary to ensure the best possible outcome. We are prepared to fight for all members of the union, no matter what diagnosis they may be facing.</p>
+              </span>
+            </div>
+          </div>
+          
+          <div class="faq" style="background-image:url('http://s3.amazonaws.com/obrien.com/images/Cube_Attorneys.jpg')">
+            <div class="question">
+              <span class="atty">Will you handle my client's case from start to finish?</span>
+              <span class="union">Will you handle my union member's case from start to finish?</span>
+            </div>
+
+            <div class="answer">
+              <p>Yes, we handle all of our mesothelioma and asbestos cases from start to finish and do not refer them to other firms.</p>
+            </div>
+          </div>
+          
+          <div class="faq" style="background-image:url('http://s3.amazonaws.com/obrien.com/images/Office_Front.jpg')">
+            <div class="question">
+              <span class="atty">What can I expect in terms of a referral fee?</span>
+              <span class="union">What can you provide me and my members?</span>
+            </div>
+
+            <div class="answer">
+              <span class="atty">
+                <p>When your client needs specialized services best provided by other lawyers, and you refer your client on with this in mind, you justly deserve to share in the fee generated. Our referral policies are generous and based upon transparency and fairness. The terms will be agreed upon at the case's inception.</p>
+              </span>
+              <span class="union">
+                <p>Besides representing a sick member in an asbestos case, we can educate your union about asbestos disease. We will cater a presentation and additional materials specific to your union’s needs.</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <img src="http://s3.amazonaws.com/obrien.com/images/Courtroom.png" />
+        <div>
+          815 Geyer Avenue<br/>
+          St. Louis, Missouri 63104<br/>
+          <a href="#">866-588-0558<br/>314-588-0558</a>
+        </div>
+        <img src="http://s3.amazonaws.com/obrien.com/images/Courtroom.png" />
+      </div>
+    </div>
+    
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script src="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      var activeFaq = undefined;
+      
+      function closeActiveFaq(faq) {
+        activeFaq = faq;
+        faq.style.height = faq.children[0].clientHeight + "px";
+        faq.children[1].style.opacity = 0;
+        setTimeout(function() {
+          activeFaq.children[1].style.transform = "translateY(100%)";
+        }, 500);
+        
+      }
+      
+      function openFaq(faq) {
+        activeFaq = faq;
+        activeFaq.children[1].style.opacity = 1;
+        faq.style.height = "320px";
+        setTimeout(function() {
+          activeFaq.children[1].style.transform = "translateY(0px)";
+        }, 500);
+      }
+      
+      $(document).ready(function() {
+        if (targetGroup == "Atty") {
+          $(".union").hide();
+        }
+        else {
+          $(".atty").hide();
+        }
+        
+        $(".faq").each(function() {
+          this.style.height = this.clientHeight + "px";
+        });
+        
+        $(".faq").click(function() {
+          if (this.style.height == "320px") {
+            closeActiveFaq(this);
+          }
+          else {
+            openFaq(this);
+          }
+        });
+        
+        // Set Video
+        if (targetGroup == "Union" && innerWidth > 736) {
+          document.querySelector("video").src = "http://s3.amazonaws.com/obrien.com/video/Union_2.mp4";
+        }
+        else if (targetGroup == "Union" && innerWidth <= 736) {
+          document.querySelector("video").src = "http://s3.amazonaws.com/obrien.com/video/Union_2_mobile.mp4";
+        }
+        else if (targetGroup == "Atty" && innerWidth > 736) {
+          document.querySelector("video").src = "http://s3.amazonaws.com/obrien.com/video/Atty_2.mp4";
+        }
+        else {
+          document.querySelector("video").src = "http://s3.amazonaws.com/obrien.com/video/Atty_2_mobile.mp4";
+        }
+        
+        if (targetGroup == "Union") {
+          $(".faq").eq(0).css("background-image", "url('https://s3.amazonaws.com/obrien.com/images/AOB_unionMtg.jpeg')");
+        }
+      });
+      
+      window.onload = function() {
+        setTimeout(function() {
+          if (document.body.clientHeight < innerHeight) {
+            var delta = innerHeight - document.body.clientHeight;
+            document.querySelector(".footer").style.marginTop = 20 + delta + "px";
+          }
+        }, 500);
+        
+        $(".faq").eq(0).css("height", "320px");
+        setTimeout(function() {
+          $(".answer").eq(0).css("transform", "translateY(0px)");
+        }, 500);
+      };
+    </script>
+  </body>
+</html>

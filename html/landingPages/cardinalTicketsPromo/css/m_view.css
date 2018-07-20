@@ -1,0 +1,83 @@
+* {
+  color: white;
+  font-family: Roboto;
+}
+
+body {
+  background: black;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+  padding-bottom: 320px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#head {
+  background: darkred;
+}
+
+#count {
+  margin-top: 7%;
+  text-align: center;
+}
+
+#logo {
+  text-align: center;
+  padding-top: 15px;
+}
+
+#logo img {
+  width: 90%;
+  max-width: 240px;
+}
+
+div#contestants {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#contestants div {
+  border-bottom: solid 1px white;
+  padding: 15px;
+  font-size: 130%;
+}
+
+#contestants ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+li {
+  font-size: 70%;
+  margin: 15px auto;
+}
+
+.glyphicon-chevron-right {
+  float: right;
+}
+
+.glyphicon-chevron-left {
+  float: left;
+}
+
+#landscape {
+  display: none;
+  margin-top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (orientation: landscape) {
+  .container-fluid {
+    display: none;
+  }
+
+  #landscape {
+    display: block;
+  }
+}

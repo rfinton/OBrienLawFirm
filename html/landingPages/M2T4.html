@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Partners in the battle against Mesothelioma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #000000;
+        font-family: 'Lato', sans-serif;
+      }
+      
+      .container-fluid { 
+        padding-left: 0; 
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        overflow-x: hidden;
+      }
+
+      .header { 
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover; 
+        padding: 30px;
+        width: 100%;
+      }
+      
+      .row {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/AndrewAtHisDesk_faded.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 200px center;
+        position: relative;
+      }
+      
+      .footer {
+        background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+        background-size: cover;
+        background-position: bottom;
+        padding: 30px;
+        color: white;
+        width: 100%;
+        text-align: right;
+      }
+      
+      .header img { 
+        width: 100%; max-width: 300px; 
+      }
+      
+      .left-col {
+        padding-top: 50px;
+        padding-left: 60px;
+        padding-bottom: 0px;
+        line-height: 160%;
+        color: #ffffff;
+        transition: all 1s ease-in;
+      }
+      
+      #next {
+        text-align: right;
+        padding-right: 60px;
+        transition: all 0.3s ease-in;
+      }
+      
+      .ui-loader h1 {
+        display: none;
+      }
+      
+      #stage2 {
+        background-color: #0C0C0C;
+        background-image: url(http://s3.amazonaws.com/obrien.com/images/microphone.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: all 1s ease-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      #stage2-text {
+        display: inline-block;
+        color: #ffffff;
+        text-align: left;
+        margin-top: 30px;
+      }
+      
+      .submit {
+        text-align: right;
+      }
+      
+      label {
+        font-weight: normal;
+      }
+      
+      
+      
+      
+      @media screen and (max-width: 1920px) {
+        p, label {
+          font-size: 160%;
+          line-height: 1.5;
+        }
+        
+        #next {
+          margin-top: 120px;
+        }
+        
+        p.right-align {
+          margin-right: 120px;
+        }
+      }
+      
+      @media screen and (max-width: 1680px) {
+        p, label {
+          font-size: 14pt;
+        }
+      }
+      
+      @media screen and (max-width: 1440px) {
+        p, label {
+          font-size: 12pt;
+        }
+        
+        #next {
+          margin-top: 0px;
+          margin-bottom: 30px;
+        }
+      }
+      
+      @media screen and (max-width: 736px) {
+        p, label {
+          font-size: 100%;
+        }
+        
+        .header {
+          text-align: center;
+        }
+        
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        
+        #blurb {
+          padding-top: 30px;
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+        
+        #stage2 {
+          padding-left: 30px;
+          padding-right: 30px;
+          background-position: bottom;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" />
+      </div>
+
+      <div class="row">
+        <div id="blurb" class="col-sm-6 col-xs-12 left-col">
+        
+          <p>For the past 20 years, &nbsp; Andrew has concentrated his practice on mesothelioma and asbestos law. &nbsp; A native of Dublin, &nbsp; Ireland, &nbsp; Andrew graduated from University College Dublin Law School in 1986, &nbsp; and worked with the firm of Gaffney &amp; Halligan for four years. &nbsp; Then, &nbsp; after moving to the United States and graduating from the Saint Louis University School of Law, &nbsp; Andrew founded the O'Brien Law Firm to commit all his energy and resources to fighting to gain compensation for victims of asbestos diseases.</p>
+          
+          <p>As a licensed asbestos attorney in Missouri, &nbsp; Illinois and the Republic of Ireland, &nbsp; he has successfully tried numerous cases to verdict. &nbsp; In 2001, &nbsp; the Missouri Bar Foundation cited Andrew O'Brien for "outstanding trial work" and presented him with the prestigious Lon O. Hocker Award, &nbsp; an award given annually by the Missouri Bar Foundation to young lawyers who have demonstrated unusual proficiency in the art of trial advocacy.</p>
+          
+          <p>In his spare time, &nbsp; Andrew is an active part of the Irish community in St. Louis and accomplished Irish violin player. &nbsp; He and his wife, &nbsp; Lori, &nbsp; have two daughters and a son.</p>
+          
+        </div>
+        
+        <div class="col-xs-12" id="next">
+          <button class="btn btn-info">
+              <span class="glyphicon glyphicon-arrow-right"></span> Next
+          </button>
+        </div>
+        
+        <div id="stage2">
+          <div id="stage2-text">
+            <h3>Enough About Us. Let's Talk About You ##firstname##!</h3>
+            <br/>
+            
+            <form method="post">
+              
+              <!-- ATTORNEY VERSION /-->
+              <div class="form-group atty">
+                <label>Where did you go to law school?</label>
+                <textarea name="input1" class="form-control" rows="1"></textarea>
+              </div>
+              
+              <div class="form-group atty">
+                <label>How many years have you been in practice?</label>
+                <input type="text" name="input2" class="form-control" />
+              </div>
+              
+              <div class="form-group atty">
+                <label>What motivates you?</label>
+                <textarea name="input3" class="form-control" rows="1"></textarea>
+              </div>
+              
+              <!-- UNION VERSION /-->
+              <div class="form-group union">
+                <label>How did you get involved with your union?</label>
+                <textarea name="input1" class="form-control" rows="1"></textarea>
+              </div>
+              
+              <div class="form-group union">
+                <label>How many years have you been in your position?</label>
+                <input type="text" name="input2" class="form-control" />
+              </div>
+              
+              <div class="form-group union">
+                <label>How many active members are in your union?</label>
+                <textarea name="input3" class="form-control" rows="1"></textarea>
+              </div>
+              
+              <div class="form-group union">
+                <label>What motivates you?</label>
+                <textarea name="input4" class="form-control" rows="1"></textarea>
+              </div>
+              
+              <br/>
+              <div class="form-group submit">
+                <input type="submit" class="btn btn-default" value="Submit" />
+              </div>
+            </form>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="footer">
+        <div>
+          815 Geyer Avenue &nbsp;&nbsp; | &nbsp;&nbsp; St. Louis, Missouri 63104 &nbsp;&nbsp; | &nbsp;&nbsp; 866-588-0558 &nbsp;&nbsp; | &nbsp;&nbsp; 314-588-0558
+        </div>
+      </div>
+    </div>
+    
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script src="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      var data;
+      var blurb;
+      var targetGroup = "##targetgroup##";
+      
+      $(document).ready(function () {
+        blurb = document.querySelector("#blurb");
+        
+        if (targetGroup == "Atty") {
+          $(".union").hide();
+        } else {
+          $(".atty").hide();
+        }
+        
+        
+        $("#next button").click(function () {
+          $("#blurb").css({
+            transform : "translate3D(" + innerWidth / -2 + "px, 0, 0)",
+            opacity : 0
+          });
+          
+          $(this).css({ opacity : 0 });
+          
+          
+          $("#stage2").css({
+            visibility : "visible",
+            opacity : 1
+          });
+          
+          $("input[type=submit]").click (function (event) {
+            var a1 = document.querySelectorAll ('.atty textarea') [0].value;
+            var a2 = document.querySelectorAll ('.atty input') [0].value;
+            var a3 = document.querySelectorAll ('.atty textarea') [1].value;
+
+            var u1 = document.querySelectorAll ('.union textarea') [0].value;
+            var u2 = document.querySelectorAll ('.union input') [0].value;
+            var u3 = document.querySelectorAll ('.union textarea') [1].value;
+            var u4 = document.querySelectorAll ('.union textarea') [2].value;
+
+            if (document.querySelector ('.union').style.display != 'none') {
+              if (/[a-z0-9]/i.test(u1) && /[a-z0-9]/i.test(u2) && /[a-z0-9]/i.test(u3) && /[a-z0-9]/i.test(u4)) {
+                document.forms[0].submit();
+              } else {
+                event.preventDefault ();
+                alert ("Please answer all questions.");
+              }
+            } else {
+              if (/[a-z0-9]/i.test(a1) && /[a-z0-9]/i.test(a2) && /[a-z0-9]/i.test(a3)) {
+                document.forms[0].submit();
+              } else {
+                event.preventDefault ();
+                alert ("Please answer all questions.");
+              }
+            }
+          });
+        });
+      });
+        
+      window.onload = setWindow;
+      window.onresize = setWindow;
+      
+      function setWindow () {
+        var headerHeight = $(".header").outerHeight();
+        var footerHeight = $(".footer").outerHeight();
+        
+        if (innerWidth > innerHeight) {
+          if ($(".container-fluid").outerHeight() < innerHeight) {
+            $(".row").css("height", innerHeight - (headerHeight + footerHeight) + "px");
+            $(".footer").css({
+              position: "fixed",
+              bottom: 0
+            });
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

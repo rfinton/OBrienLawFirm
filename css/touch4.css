@@ -1,0 +1,193 @@
+@import url("http://fonts.googleapis.com/css?family=Oxygen");
+
+@keyframes fadeLeftOut {
+  0% { 
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1; 
+  }
+  100% { 
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLeftIn {
+  0% { 
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+    opacity: 0; 
+  }
+  100% { 
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1; 
+  }
+}
+
+.ui-effect-left-fadeOut {
+  animation-name: fadeLeftOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  z-index: 0;
+}
+
+.ui-effect-left-fadeIn {
+  animation-name: fadeLeftIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  z-index: 1;
+}
+
+.ui-image-group {
+  width: 100%;
+  padding: 0 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(-200px);
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.ui-image {
+  width: 100%;
+  margin: 30px auto 0 auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+div.info-graphics {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.control-left {
+  float: none;
+  z-index: 2;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  margin-top: 35%;
+  top: 0;
+  left: 0;
+}
+
+.control-right {
+  text-align: right;
+  float: none;
+  z-index: 2;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  margin-top: 35%;
+  top: 0;
+  right: 0;
+}
+
+.glyphicon:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* BASIC CSS */
+
+.container-fluid {
+  display: none;
+  padding-left: 0; 
+  padding-right: 0; 
+  background-image: url("http://s3.amazonaws.com/obrien.com/images/WebStoneMarbleTexture.jpg");
+  background-size: cover;
+  font-family: "Oxygen", sans-serif;
+}
+
+.header { 
+  background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+  background-size: cover; 
+  padding: 30px; 
+}
+
+.header img { 
+  width: 100%; 
+  max-width: 300px; 
+}
+
+.download {
+  text-align: center;
+}
+
+.download h3 {
+  margin-top: 0;
+}
+
+.row {
+  margin: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+li {
+  margin-top: 15px;
+}
+
+.control {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.faq {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.faq-header {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  clear: both;
+}
+
+.video-content {
+  width: 100%;
+  border: solid 30px transparent;
+}
+
+#command-info {
+  display: none;
+  text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 736px) {
+  .row, .left { padding: 0; }
+  .ui-image-group { padding: 0; overflow-x: auto; }
+  .ui-image { padding: 0; margin: 15px 0 0 0; width: 90%; transition: none; }
+  .video-content { width: 100%; border: none; margin-top: 15px; }
+  #command-info { display: block; }
+}
+
+@media screen and (max-width: 960px) and (orientation: landscape) {
+  #command-info { display: none; }
+  .video-content { margin-top: 60px; }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .ui-image-group { padding: 0; }
+  #command-info { display: none; }
+  .video-content { margin-top: 15px; }
+}

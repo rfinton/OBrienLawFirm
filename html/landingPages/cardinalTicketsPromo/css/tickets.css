@@ -1,0 +1,85 @@
+body {
+  background-image: url(http://s3.amazonaws.com/obrien.com/images/stadium.jpg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;}
+.row {
+  margin-right: 0;
+  margin-left: 0;}
+.form, .confirm {
+  width: 50%;
+  margin: 15px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 6px;
+  box-shadow: 1px 1px 24px black;}
+.header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;}
+label {
+  color: white;}
+.logo {
+  text-align: center;}
+img#cardinal {
+  max-height: 140px;}
+img#obrien {
+  width: 100%;
+  max-width: 320px;}
+.submit {
+  text-align: center;}
+h1, p {
+  color: #FFFA00;
+  text-shadow: 1px 1px black;}
+p {
+  font-size: 130%;}
+.end {
+  background: black;
+  padding: 15px;}
+.end a {
+  color: white;
+  text-decoration: none;}
+#success p {
+  color: black;
+  font-size: 100%;
+  text-shadow: none;}
+.confirm h2 {
+  color: white;
+  text-align: center;}
+.dates {
+  text-align: center;
+  color:red;
+  font-style:italic; 
+  background-color:rgba(243,173,195,0.8); 
+  border-radius:3px; padding:6px; 
+  text-shadow:none;}
+
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 100%;}
+  .header {
+    background-color: rgba(0,0,0,0.7);}
+}
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .form, .confirm {
+    width: 80%;}
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    background-size: auto 100%;}
+  .form, .confirm {
+    width: 90%;}
+  .logo {
+    text-align: center;}
+  .logo img {
+    max-height: 128px;}
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    background-size: 100% auto;}
+  .logo img {
+    max-height: 128px;}
+}

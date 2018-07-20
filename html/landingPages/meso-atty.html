@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mesothelioma Awareness</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/js/bootstrap-3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/css/meso.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" /><br/>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12 col-lg-6 left">
+          
+          <div class="video-content">
+            
+            <video id="ObrienVideo" style="width:100%" controls preload="auto" poster="http://s3.amazonaws.com/obrien.com/images/videoPosterWithButton.jpg">
+              <source src="http://s3.amazonaws.com/obrien.com/video/Attorney_1.mp4" type="video/mp4" />
+            </video>
+            
+          </div>
+          
+          <div class="wallpaper">
+            <div class="jumbotron">  
+              <p>Did you know that approximately 3,000 people are still being diagnosed with mesothelioma each year? Although it is a relatively rare cancer, its side effects are overwhelming and devastating.<br/>
+              <br/>
+              We recognize the importance of protecting not only the rights of our current clients, but the rights of those who will undoubtedly get sick in the future. We educate legislators about the dangers of asbestos disease, so future victims have the right to be heard at trial.<br/>
+              <br/>
+              At the O'Brien Law Firm, we understand the day-to-day issues of mesothelioma. We will treat your clients with respect and empathy, while leveraging our decades of experience to fight for the security they deserve.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-lg-6 right">
+          
+          <div class="quiz-header">
+            <h2>Test your knowledge.</h2>
+            <h2>Take our quiz.</h2>
+          </div>
+          
+          <div class="jumbotron qa">
+            
+            <div id="final" class="question">
+              
+              Thanks for taking the quiz ##firstname##.<br>
+              <br>
+              Click below to download our free guide,<br>
+              <i>How Mesothelioma Develops.</i>
+              
+              <div id="download-guide">
+                <a href="http://s3.amazonaws.com/obrien.com/dl/How_Meso_Develops_Atty" download="How_Meso_Develops.pdf" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-download"></span> Download Free Guide
+                </a>
+              </div>
+              
+              <div id="response"></div>
+              
+            </div>
+            
+            <div id="question5" class="question btn5-answer btn5-next">
+              <label class="text-question">Would you like us to contact you about a mesothelioma case?</label>
+              <table>
+                <tr>
+                  <td><input id="m1" name="input3" type="radio" value="yes" /></td>
+                  <td><label for="m1">Yes</label></td>
+                </tr>
+                <tr>
+                  <td><input id="m2" name="input3" type="radio" value="no" /></td>
+                  <td><label for="m2">No</label></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <span id="btn5-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="question4" class="question btn4-answer btn4-next">
+              <label class="text-question">Has a client ever been affected by mesothelioma or asbestos disease?</label>
+              <table>
+                <tr>
+                  <td><input id="l1" name="r4" type="radio" value="yes" /></td>
+                  <td><label for="l1">Yes</label></td>
+                </tr>
+                <tr>
+                  <td><input id="l2" name="r4" type="radio" value="no" /></td>
+                  <td><label for="l2">No</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" id="quizscore" class="hidden" name="quizscore" /></td>
+                  <td>
+                    <span id="btn4-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            
+            <div id="question3" class="question btn3-answer btn3-next">
+              <label class="text-question">Which one of the following countries has NOT banned asbestos?</label>
+              <table>
+                <tr>
+                  <td><input id="k2" name="r3" type="radio" value="" /></td>
+                  <td><label for="k2">Honduras</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="k1" name="r3" type="radio" value="correct" /></td>
+                  <td><label for="k1">United States</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="k3" name="r3" type="radio" value="" /></td>
+                  <td><label for="k3">United Kingdom</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn3-answer" class="btn btn-default check">Check Answer</button>
+                    <span id="btn3-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="question2" class="question btn2-answer btn2-next">
+              <label class="text-question">Mesothelioma can develop even if there is a minimal dose of exposure to asbestos.</label>
+              <table>
+                <tr>
+                  <td><input id="j1" name="r2" type="radio" value="correct" /></td>
+                  <td><label for="j1">True</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="j2" name="r2" type="radio" value="" /></td>
+                  <td><label for="j2">False</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn2-answer" class="btn btn-default check">Check Answer</button>
+                    <span id="btn2-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="question1" class="question btn1-answer btn1-next">
+              <label class="text-question">What is the ancient Greek meaning of the word "asbestos"?</label>
+              <table>
+                <tr>
+                  <td><input id="i1" name="r1" type="radio" value="correct" /></td>
+                  <td><label for="i1">Inextinguishable</label>&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="i2" name="r1" type="radio" value="" /></td>
+                  <td><label for="i2">Soft</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td><input id="i3" name="r1" type="radio" value="" /></td>
+                  <td><label for="i3">Compressible</label>&nbsp;<span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button id="btn1-answer" class="btn btn-default check">Check Answer</button>
+                    <span id="btn1-next" class="glyphicon glyphicon-circle-arrow-right"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+    <script src="http://s3.amazonaws.com/obrien.com/js/main.js"></script>
+  </body>
+</html>

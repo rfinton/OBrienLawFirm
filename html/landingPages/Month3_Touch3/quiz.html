@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="http://s3.amazonaws.com/obrien.com/js/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://s3.amazonaws.com/obrien.com/css/m3t3.css" rel="stylesheet" type="text/css">
+  <!-- <link href="css/m3t3.css" rel="stylesheet"> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+</head>
+<body>
+  <div class="main container-fluid">
+    <div class="header">
+      <a href="http://obrienlawfirm.com">
+        <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png">
+      </a>
+    </div>
+    
+    <div class="row content">
+      <div class="chalkboard">
+        <p>Put on your quiz cap ##firstname##!<br>It's time to test your knowledge of asbestos regulation.</p>
+        <div class="quiz-button">
+          <a href="#" data-toggle="modal" data-target="#quiz-modal">Click here to start the quiz</a>
+        </div>
+        <div id="more-info">
+          <h2>Where to report a suspected asbestos violation</h2>
+          <ol>
+            <li>You may submit a tip through an online form on the EPA website at <a target="_blank" href="http://www.epa.gov/tips/">http://www.epa.gov/tips/</a></li>
+            <li>Reach out to your state asbestos administrative department and regional asbestos program<br>In Missouri:<br>
+              <ul>
+                <li><a target="_blank" href="http://dnr.mo.gov/env/apcp/asbestos/#forms">Missouri Department of Natural Resources</a></li>
+                <li><a target="_blank" href="https://www.epa.gov/mo">Missouri EPA</a></li>
+                <li><a target="_blank" href="https://www.stlouis-mo.gov/government/departments/health/">St. Louis City Air Pollution Control</a></li>
+                <li><a target="_blank" href="http://www.stlouisco.com/healthandwellness/environmentalservices/airpollutioncontrolprogram/asbestos">St. Louis County Air Pollution Control</a></li>
+              </ul>
+              In Illinois:<br>
+              <ul>
+                <li><a target="_blank" href="http://www.dph.illinois.gov/topics-services/environmental-health-protection/asbestos">Illinois Department of Public Health</a></li>
+                <li><a target="_blank" href="http://www.epa.illinois.gov/topics/air-quality/asbestos/">Illinois EPA</a></li>
+                <li><a target="_blank"  href="https://www.cityofchicago.org/city/en/depts/cdph/provdrs/inspections_and_permitting/svcs/report_an_environmentalcomplaint.html">Chicago Department of Public Health</a></li>
+              </ul>
+            </li>
+            <li>If you suspect asbestos in your home, do not disturb the possible asbestos containing material.<br>
+              <ul>
+                <li>Generally, if the ACM (asbestos containing material) is in good condition and left in place, it should not present health risks.</li>
+                <li>However, if you are demolishing, renovating, or remodeling your home, you should consider hiring an asbestos inspector.</li>
+                <li>If it is determined that the suspected material does contain asbestos and the best course of action would be removal, hire a professional contractor who is licensed and trained.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div> <!-- END CHALKBOARD -->
+      
+      <div class="contact-us">
+        <a href="#" data-toggle="modal" data-target="#contact-us">Contact Us</a>
+      </div>
+    </div>
+    
+    <div class="footer">  
+      <div>
+        815 Geyer Avenue &nbsp;&nbsp; | &nbsp;&nbsp; St. Louis, Missouri 63104 &nbsp;&nbsp; | &nbsp;&nbsp; 866-588-0558 &nbsp;&nbsp; | &nbsp;&nbsp; 314-588-0558
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="quiz-modal" class="modal fade" role="dialog" ng-app="quizApp" ng-controller="QuizController">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Quiz</h4>
+          </div>
+        
+          <div class="modal-body">
+            <div class="question-container">
+              <span class="number">{{ showQuestionNumber() }}.</span> <span class="question">{{ showQuestion() }}</span>
+            </div>
+            
+            <div class="choices">
+              <div class="choice">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="A" name="question" value="A" type="radio">
+                    </td>
+                    <td>
+                      <label for="A" class="A">A: &nbsp;{{ showChoiceA() }}</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="choice">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="B" name="question" value="B" type="radio">
+                    </td>
+                    <td>
+                      <label for="B" class="B">B: &nbsp;{{ showChoiceB() }}</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="choice">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="C" name="question" value="C" type="radio">
+                    </td>
+                    <td>
+                      <label for="C" class="C">C: &nbsp;{{ showChoiceC() }}</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="choice">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="D" name="question" value="D" type="radio">
+                    </td>
+                    <td>
+                      <label for="D" class="D">D: &nbsp;{{ showChoiceD() }}</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="choice">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="E" name="question" value="E" type="radio">
+                    </td>
+                    <td>
+                      <label for="E" class="E">E: &nbsp;{{ showChoiceE() }}</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="quiz-end">
+              <h3>Quiz done!</h3>
+              Click <a target="_blank" href="https://www.epa.gov/asbestos/protect-your-family#professionals#professionals">here</a> for advice from the EPA about asbestos protection and <a target="_blank" href="https://www.osha.gov/SLTC/asbestos/standards.html">here</a> for OSHA occupational standards.
+            </div>
+          </div>
+        
+          <div class="modal-footer">
+            <div class="responder">
+              <span class="correct">Correct!</span>
+              <span class="incorrect">Incorrect</span>
+            </div>
+            
+            <button id="answer-btn" type="button" class="btn btn-success" ng-click="checkAnswer()">Check Answer</button>
+            <button id="next-btn" type="button" class="btn btn-info" ng-click="showNextQuestion()">Next</button>
+            <button id="exit-modal" type="button" class="btn btn-info" ng-click="exitModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of modal -->
+    
+    <!-- Contact Us Modal -->
+      <div id="contact-us" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Send us an email</h4>
+            </div>
+
+            <form method="post">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="fn">First Name: </label>
+                  <input class="form-control" type="text" name="firstname" id="fn" value="##firstname##" />
+                </div>
+                <div class="form-group">
+                  <label for="ln">Last Name: </label>
+                  <input class="form-control" type="text" name="lastname" id="ln" value="##lastname##" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email: </label>
+                  <input class="form-control" type="text" name="email" id="email" value="##email##" />
+                </div>
+                <div class="form-group">
+                  <label for="comment">Message: </label>
+                  <textarea class="form-control" type="text" name="comment" id="comment" row="5" placeholder="type short message..."></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-default" value="Send" />
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div> <!-- END MODAL -->
+  </div>
+
+  
+  
+  <!-- JQuery -->
+  <script src="http://s3.amazonaws.com/obrien.com/js/jquery-1.12.0.min.js"></script>
+  
+  <!-- Modules -->
+  <script src="http://s3.amazonaws.com/obrien.com/js/app.js"></script>
+  <!-- <script src="js/app.js"></script> -->
+
+  <!-- Controllers -->
+  <script src="http://s3.amazonaws.com/obrien.com/js/QuizController.js"></script>
+  <!-- <script src="controllers/QuizController.js"></script> -->
+  
+  <!-- Bootstrap javascript -->
+  <script src="http://s3.amazonaws.com/obrien.com/js/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

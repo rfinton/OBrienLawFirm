@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>O'Brien Law Firm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/css/view.css?v=1">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="head">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" id="logo">
+            <img src="http://s3.amazonaws.com/obrien.com/images/OBLFLogo_MesoAsb_White.png" alt="logo">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4 id="count"></h4>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Group</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="contestants"></tbody>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+    <!-- FOR DEVELOPMENT TESTING ONLY
+      <script src="js/view.js?v=1"></script>
+    /-->
+    <script src="https://s3.amazonaws.com/obrien.com/js/view.js?v=1"></script>
+  </body>
+</html>

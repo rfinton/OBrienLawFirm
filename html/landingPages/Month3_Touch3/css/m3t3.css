@@ -1,0 +1,180 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+  font-family: Chalk;
+  src: url("../fonts/Chalk.ttf");
+}
+
+* { 
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header { 
+  background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+  background-size: cover; 
+  padding: 30px;
+  width: 100%;
+}
+
+.header img { 
+  width: 100%; max-width: 300px; 
+}
+
+.content {
+  background-image: url("http://s3.amazonaws.com/obrien.com/images/WebCreamPaperTexture.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.chalkboard {
+  background-image: url("../images/blackboard-with-chalk.jpg");
+  background-size: 100% 100%;
+  width: 90%;
+  max-width: 1024px;
+  padding: 6%;
+  margin: auto;
+  text-align: center;
+}
+
+.chalkboard p {
+  font-family: Chalk;
+  color: white;
+  font-size: 180%;
+}
+
+h2 {
+  color: white;
+  text-align: left;
+}
+
+ol li {
+  margin-top: 12px;
+}
+
+li {
+  text-align: left;
+  color: white;
+  width: 80%;
+  font-weight: normal;
+}
+
+li a {
+  color: yellow;
+}
+
+li a:focus, li a:hover, li a:visited {
+  text-decoration: none;
+  color: yellow;
+}
+
+.quiz-button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.quiz-button a {
+  font-family: Chalk;
+  font-size: 240%;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.footer {
+  background-image: url("http://s3.amazonaws.com/obrien.com/images/BlueOverlayAsbestos_Fibers.jpg"); 
+  background-size: cover;
+  background-position: bottom;
+  padding: 30px 30px 90px 30px;
+  color: #ffffff;
+  width: 100%;
+  text-align: right;
+}
+
+
+/* --- QUIZ WINDOW THEME --- */
+.choice {
+  margin-top: 15px;
+}
+
+.number, .question, .correct, .incorrect {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+input[type=radio] {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.choice label {
+  margin: 0;
+  display: inline;
+  font-weight: normal;
+}
+
+.responder {
+  display: inline;
+  float: left;
+  font-size: 120%;
+}
+
+.correct {
+  display: none;
+  color: chartreuse;
+}
+
+.incorrect {
+  display: none;
+  color: red;
+}
+
+#next-btn, #exit-modal, #more-info {
+  display: none;
+}
+
+#quiz-modal .modal-header {
+  background: #663334;
+  color: white;
+}
+
+#quiz-modal .modal-footer {
+  background: #663334;
+}
+
+.quiz-end {
+  display: none;
+  margin: 30px;
+}
+
+.quiz-end h3 {
+  margin-top: 0;
+}
+
+.contact-us {
+  text-align: center;
+  background: transparent;
+}
+
+.contact-us a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 15px 30px;
+  background: black;
+}
+
+@media screen and (max-width: 768px) {
+  div.chalkboard {
+    width: 100%;
+  }
+}

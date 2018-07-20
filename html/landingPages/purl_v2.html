@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+    <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://s3.amazonaws.com/obrien.com/css/main_v2.css" />
+  </head>
+  <body>
+    
+    <div class="jumbotron">
+      <h3 style="text-align: center;">
+        <noscript>To continue viewing this site please enable javascript in your browser.</noscript>
+      </h3>
+    </div>
+    <script>
+      document.getElementsByClassName("jumbotron")[0].style.display = "none";
+    </script>
+
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="http://s3.amazonaws.com/obrien.com/images/obrienLawLogoWhite.png" alt="O'Brienlogo" /><br/>
+        <span style="color:white">Mesothelioma &amp; Asbestos Attorneys</span>
+      </div>
+      
+      <div class="video-content">
+        <div class="vid">
+          <div id="imageArea">
+            <img src="http://s3.amazonaws.com/obrien.com/images/poster1.JPG" alt="video poster" />
+          </div>
+          <div class="playBtn">
+            <a href="#" id="playButton" class="btn btn-info btn-lg">
+              <span class="glyphicon glyphicon-play-circle"></span> Play
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-1">
+
+        ##text_1##
+        
+        <div>
+          <form id="next" method="post">
+            <button type="submit" class="btn btn-default next">
+              <span style="vertical-align: middle;">Next</span> <span style="vertical-align: middle;" class="glyphicon glyphicon-menu-right"></span>
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    <script src="http://s3.amazonaws.com/obrien.com/node_modules/jquery-1x/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        
+        var targetGroup = "##targetGroup##";
+        
+        $(window).on("load", function(){
+          $(".container-fluid").css("display", "block");
+          $(".vid").animate({opacity: 1}, 2000);
+          
+          centerPlayButton();
+
+          $(".vid a").click(function() {
+            if( targetGroup == "Atty") {
+              $("#imageArea").remove();
+              $("#playButton").remove();
+              $(".vid").append(attyVideo);
+              attyVideo.play();  
+            }
+            else {
+              $("#imageArea").remove();
+              $("#playButton").remove();
+              $(".vid").append(unionVideo);
+              unionVideo.play();
+            }
+            
+          });
+        });
+        
+        $(window).on("orientationchange", function(){
+          centerPlayButton();
+        });
+
+      });
+    
+      attyVideo = document.createElement("video");
+      attyVideo.style.backgroundColor = "black";
+      attyVideo.style.width = "100%";
+      attyVideo.controls = true;
+      attyVideo.preload = "auto";
+      attyVideo.onprogress = function() {
+        console.log(attyVideo.readyState);
+      };
+
+      attyMp4 = document.createElement("source");
+      attyMp4.src = "http://s3.amazonaws.com/obrien.com/video/Attorney_1.mp4";
+      attyMp4.type = "video/mp4";
+
+      attyWebm = document.createElement("source");
+      attyWebm.src = "http://s3.amazonaws.com/obrien.com/video/Attorney_1.webm";
+      attyWebm.type = "video/webm";
+
+      attyOgv = document.createElement("source");
+      attyOgv.src = "http://s3.amazonaws.com/obrien.com/video/Attorney_1.ogv";
+      attyOgv.type = "video/ogg";
+
+      $(attyVideo).append(attyMp4);
+      $(attyVideo).append(attyWebm);
+      $(attyVideo).append(attyOgv);
+      
+      unionVideo = document.createElement("video");
+      unionVideo.style.backgroundColor = "black";
+      unionVideo.style.width = "100%";
+      unionVideo.controls = true;
+      unionVideo.preload = "auto";
+      unionVideo.onprogress = function() {
+        console.log(unionVideo.readyState);
+      };
+
+      unionMp4 = document.createElement("source");
+      unionMp4.src = "http://s3.amazonaws.com/obrien.com/video/Union_1.mp4";
+      unionMp4.type = "video/mp4";
+
+      unionWebm = document.createElement("source");
+      unionWebm.src = "http://s3.amazonaws.com/obrien.com/video/Union_1.webm";
+      unionWebm.type = "video/webm";
+
+      unionOgv = document.createElement("source");
+      unionOgv.src = "http://s3.amazonaws.com/obrien.com/video/Union_1.ogv";
+      unionOgv.type = "video/ogg";
+
+      $(unionVideo).append(unionMp4);
+      $(unionVideo).append(unionWebm);
+      $(unionVideo).append(unionOgv);
+
+      
+      function centerPlayButton() {
+        var x = screen.width;
+        
+        if( x < 1024 ) {
+          var h = x / 1.9 * -1;
+          $("#playButton").css("marginTop", h + "px");
+          $("#playButton").css("marginLeft", x / 2 - 75 + "px");
+        }
+        else {
+          x = $("#imageArea").outerWidth();
+          var h = $("#imageArea").outerHeight() * -1;
+          $("#playButton").css("marginTop", h + "px");
+          $("#playButton").css("marginLeft", x / 2 - 75 + "px");
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
